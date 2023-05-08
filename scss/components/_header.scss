@@ -1,0 +1,29 @@
+.header{
+    &__wrapper{
+        h2{
+            position: relative;
+            font-family: $ff-secondary;
+            font-size: 33px;
+            padding: 2rem 1.5rem;
+            width: 163px;
+            letter-spacing: 2px;
+            background-color: $clr-lgreen ;
+        }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 710px;
+            height: 200px;
+            background-color: $clr-gray;
+            z-index: -1;
+        }
+        nav ul{
+            gap: 8rem;
+            font-size: 18px;
+            li a{
+                color: white;
+            }
+        }
+    }
+}

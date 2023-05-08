@@ -1,0 +1,665 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: #1B2626;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.header__wrapper h2 {
+  position: relative;
+  font-family: "Anton", sans-serif;
+  font-size: 33px;
+  padding: 2rem 1.5rem;
+  width: 163px;
+  letter-spacing: 2px;
+  background-color: #0E8388;
+}
+.header__wrapper .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 710px;
+  height: 200px;
+  background-color: #2C3333;
+  z-index: -1;
+}
+.header__wrapper nav ul {
+  gap: 8rem;
+  font-size: 18px;
+}
+.header__wrapper nav ul li a {
+  color: white;
+}
+
+.banner__wrapper {
+  position: relative;
+}
+.banner__wrapper .slide-up {
+  position: absolute;
+  left: 6rem;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+.banner__wrapper .slide-up .skill1 {
+  animation: 0.5s slide-up;
+  margin-top: 0%;
+  font-size: 60px;
+}
+.banner__wrapper .slide-up .skill2 {
+  animation: 0.9s slide-up;
+  margin-top: 0%;
+  font-size: 60px;
+}
+.banner__wrapper .slide-up .skill3 {
+  animation: 1.3s slide-up;
+  margin-top: 0%;
+  font-size: 60px;
+}
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 300%;
+  }
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+.banner__wrapper .slide-right {
+  margin-top: 20rem;
+  height: 200px;
+  overflow: hidden;
+  margin-left: 6rem;
+}
+.banner__wrapper .slide-right p {
+  width: 68%;
+  animation: 0.5s slide-right;
+}
+.banner__wrapper .slide-right a {
+  position: relative;
+  animation: 0.5s slide-right;
+  background-color: #CBE4DE;
+  font-weight: bold;
+  color: black;
+  padding: 0.5rem 3.5rem 0.5rem 2rem;
+  border: 2px solid black;
+  border-radius: 5rem;
+  transition: 0.5s ease;
+}
+.banner__wrapper .slide-right a i {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  padding: 0.71rem;
+  margin-left: 1rem !important;
+  background-color: #2C3333;
+  border-radius: 50%;
+  border: 1px solid black;
+  color: #CBE4DE;
+  transition: 0.5s ease;
+}
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.banner__wrapper .slide-right a:hover {
+  padding: 0.5rem 2rem 0.5rem 3.5rem;
+  background-color: #2C3333;
+  color: #CBE4DE;
+  transition: 0.5s ease-in;
+}
+.banner__wrapper .slide-right a:hover i {
+  right: 9.8rem;
+  border: none;
+  transition: 0.5s ease;
+}
+.banner__wrapper .image {
+  position: absolute;
+  right: -6rem;
+  top: -8rem;
+  z-index: -1;
+  overflow: hidden;
+}
+.banner__wrapper .image img {
+  animation: slide-left 0.5s ease;
+}
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+    width: 200%;
+    transition: 0.5s ease;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+    transition: 0.5s ease;
+  }
+}
+
+.mainSkills__wrapper .tours__wrapper {
+  margin: 0 auto !important;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+@media screen and (max-width: 820px) {
+  .mainSkills__wrapper .tours__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .mainSkills__wrapper .tours__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+}
+.mainSkills__wrapper .tours__card {
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  transition: 0.5s ease-in;
+  border-radius: 25px;
+}
+.mainSkills__wrapper .tours__card img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+@media screen and (max-width: 48rem) {
+  .mainSkills__wrapper .tours__card img {
+    width: 100%;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .mainSkills__wrapper .tours__card:nth-child(1), .mainSkills__wrapper .tours__card:nth-child(2), .mainSkills__wrapper .tours__card:nth-child(3), .mainSkills__wrapper .tours__card:nth-child(4) {
+    margin-bottom: 1rem;
+    top: 0;
+  }
+}
+.mainSkills__wrapper .tours__card .tours__details {
+  position: absolute;
+  bottom: 9rem;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.mainSkills__wrapper .tours__card:hover {
+  transition: 0.5s ease-in;
+}
+.mainSkills__wrapper .tours__card:hover img {
+  filter: grayscale(50%);
+}
+.mainSkills__wrapper .tours__card:hover .tours__details h4 {
+  display: none;
+}
+.mainSkills__wrapper .tours__card:hover .overlay {
+  color: white;
+  position: absolute;
+  padding: 1rem;
+  visibility: visible;
+  top: 5rem;
+}
+.mainSkills__wrapper .tours__card:hover .overlay h3 {
+  font-weight: bold;
+}
+.mainSkills__wrapper .overlay {
+  visibility: hidden;
+}
+
+.bg--primary {
+  background-color: #1B2626;
+}
+
+.text--primary {
+  color: #1B2626;
+}
+
+.btn.bg--primary {
+  padding: 0.3rem 2.5rem;
+  color: #00FFFF;
+  font-weight: 600;
+  border-radius: 5rem;
+  display: inline-block;
+  background: #1B2626;
+}
+.btn.bg--primary:hover {
+  background-color: #060808;
+}
+
+.bg--green {
+  background-color: #2A4646;
+}
+
+.text--green {
+  color: #2A4646;
+}
+
+.btn.bg--green {
+  padding: 0.3rem 2.5rem;
+  color: #00FFFF;
+  font-weight: 600;
+  border-radius: 5rem;
+  display: inline-block;
+  background: #2A4646;
+}
+.btn.bg--green:hover {
+  background-color: #172626;
+}
+
+.bg--gray {
+  background-color: #2C3333;
+}
+
+.text--gray {
+  color: #2C3333;
+}
+
+.btn.bg--gray {
+  padding: 0.3rem 2.5rem;
+  color: #00FFFF;
+  font-weight: 600;
+  border-radius: 5rem;
+  display: inline-block;
+  background: #2C3333;
+}
+.btn.bg--gray:hover {
+  background-color: #141818;
+}
+
+.bg--blue {
+  background-color: #00FFFF;
+}
+
+.text--blue {
+  color: #00FFFF;
+}
+
+.btn.bg--blue {
+  padding: 0.3rem 2.5rem;
+  color: #00FFFF;
+  font-weight: 600;
+  border-radius: 5rem;
+  display: inline-block;
+  background: #00FFFF;
+}
+.btn.bg--blue:hover {
+  background-color: #00cccc;
+}
+
+.bg--lightBlue {
+  background-color: #CBE4DE;
+}
+
+.text--lightBlue {
+  color: #CBE4DE;
+}
+
+.btn.bg--lightBlue {
+  padding: 0.3rem 2.5rem;
+  color: #00FFFF;
+  font-weight: 600;
+  border-radius: 5rem;
+  display: inline-block;
+  background: #CBE4DE;
+}
+.btn.bg--lightBlue:hover {
+  background-color: #a9d3c9;
+}
+
+.bg--lightGreen {
+  background-color: #0E8388;
+}
+
+.text--lightGreen {
+  color: #0E8388;
+}
+
+.btn.bg--lightGreen {
+  padding: 0.3rem 2.5rem;
+  color: #00FFFF;
+  font-weight: 600;
+  border-radius: 5rem;
+  display: inline-block;
+  background: #0E8388;
+}
+.btn.bg--lightGreen:hover {
+  background-color: #09565a;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--justify {
+  text-align: justify;
+}
+
+.justify--start {
+  justify-content: flex-start;
+}
+
+.justify--center {
+  justify-content: center;
+}
+
+.justify--end {
+  justify-content: flex-end;
+}
+
+.justify--between {
+  justify-content: space-between;
+}
+
+.justify--around {
+  justify-content: space-around;
+}
+
+.d--flex {
+  display: flex;
+}
+
+.d--grid {
+  display: grid;
+}
+
+.d--block {
+  display: block;
+}
+
+.d--inline-block {
+  display: inline-block;
+}
+
+.d--inline {
+  display: inline;
+}
+
+.align--start {
+  align-items: flex-start;
+}
+
+.align--center {
+  align-items: center;
+}
+
+.align--end {
+  align-items: flex-end;
+}
+
+.mb--1 {
+  margin-bottom: 1rem;
+}
+
+.mt--1 {
+  margin-top: 1rem;
+}
+
+.py--1 {
+  padding: 1rem 0;
+}
+
+.px--1 {
+  padding: 0 1rem;
+}
+
+.my--1 {
+  margin: 1rem 0;
+}
+
+.mx--1 {
+  margin: 0 1rem;
+}
+
+.mb--2 {
+  margin-bottom: 2rem;
+}
+
+.mt--2 {
+  margin-top: 2rem;
+}
+
+.py--2 {
+  padding: 2rem 0;
+}
+
+.px--2 {
+  padding: 0 2rem;
+}
+
+.my--2 {
+  margin: 2rem 0;
+}
+
+.mx--2 {
+  margin: 0 2rem;
+}
+
+.mb--3 {
+  margin-bottom: 3rem;
+}
+
+.mt--3 {
+  margin-top: 3rem;
+}
+
+.py--3 {
+  padding: 3rem 0;
+}
+
+.px--3 {
+  padding: 0 3rem;
+}
+
+.my--3 {
+  margin: 3rem 0;
+}
+
+.mx--3 {
+  margin: 0 3rem;
+}
+
+.mb--4 {
+  margin-bottom: 4rem;
+}
+
+.mt--4 {
+  margin-top: 4rem;
+}
+
+.py--4 {
+  padding: 4rem 0;
+}
+
+.px--4 {
+  padding: 0 4rem;
+}
+
+.my--4 {
+  margin: 4rem 0;
+}
+
+.mx--4 {
+  margin: 0 4rem;
+}
+
+.mb--5 {
+  margin-bottom: 5rem;
+}
+
+.mt--5 {
+  margin-top: 5rem;
+}
+
+.py--5 {
+  padding: 5rem 0;
+}
+
+.px--5 {
+  padding: 0 5rem;
+}
+
+.my--5 {
+  margin: 5rem 0;
+}
+
+.mx--5 {
+  margin: 0 5rem;
+}
+
+.mb--6 {
+  margin-bottom: 6rem;
+}
+
+.mt--6 {
+  margin-top: 6rem;
+}
+
+.py--6 {
+  padding: 6rem 0;
+}
+
+.px--6 {
+  padding: 0 6rem;
+}
+
+.my--6 {
+  margin: 6rem 0;
+}
+
+.mx--6 {
+  margin: 0 6rem;
+}
+
+.mb--7 {
+  margin-bottom: 7rem;
+}
+
+.mt--7 {
+  margin-top: 7rem;
+}
+
+.py--7 {
+  padding: 7rem 0;
+}
+
+.px--7 {
+  padding: 0 7rem;
+}
+
+.my--7 {
+  margin: 7rem 0;
+}
+
+.mx--7 {
+  margin: 0 7rem;
+}
+
+.mb--8 {
+  margin-bottom: 8rem;
+}
+
+.mt--8 {
+  margin-top: 8rem;
+}
+
+.py--8 {
+  padding: 8rem 0;
+}
+
+.px--8 {
+  padding: 0 8rem;
+}
+
+.my--8 {
+  margin: 8rem 0;
+}
+
+.mx--8 {
+  margin: 0 8rem;
+}
+
+.mb--9 {
+  margin-bottom: 9rem;
+}
+
+.mt--9 {
+  margin-top: 9rem;
+}
+
+.py--9 {
+  padding: 9rem 0;
+}
+
+.px--9 {
+  padding: 0 9rem;
+}
+
+.my--9 {
+  margin: 9rem 0;
+}
+
+.mx--9 {
+  margin: 0 9rem;
+}
+
+.mb--10 {
+  margin-bottom: 10rem;
+}
+
+.mt--10 {
+  margin-top: 10rem;
+}
+
+.py--10 {
+  padding: 10rem 0;
+}
+
+.px--10 {
+  padding: 0 10rem;
+}
+
+.my--10 {
+  margin: 10rem 0;
+}
+
+.mx--10 {
+  margin: 0 10rem;
+}/*# sourceMappingURL=main.min.css.map */

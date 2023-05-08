@@ -1,0 +1,192 @@
+.banner{
+    &__wrapper{
+        position: relative;
+        .slide-up{
+            position: absolute;
+            left: 6rem;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            .skill1{
+                animation: 0.5s slide-up;
+                margin-top: 0%;
+               font-size: 60px;
+            }
+            .skill2{
+                animation: 0.9s slide-up;
+                margin-top: 0%;
+                font-size: 60px;
+            }
+            .skill3{
+                animation: 1.3s slide-up;
+                margin-top: 0%;
+                font-size: 60px;
+            }
+        }
+        @keyframes slide-up{
+            from {
+                margin-top: 100%;
+                height: 300%; 
+              }
+            
+              to {
+                margin-top: 0%;
+                height: 100%;
+              }
+            }
+        .slide-right {
+            margin-top: 20rem;
+            height: 200px;
+            overflow: hidden;
+            margin-left: 6rem;
+            p{
+                width: 68%;
+                animation: 0.5s slide-right;
+            }
+            a{
+                position: relative;
+                animation: 0.5s slide-right;
+                background-color: $clr-lblue;
+                font-weight: bold;
+                color: black;
+                padding: 0.5rem 3.5rem 0.5rem 2rem;
+                border: 2px solid black;
+                border-radius: 5rem;
+                transition: 0.5s ease;
+           
+                i{
+                    position: absolute;
+                    top: -1px;
+                    right: -1px;
+                    padding: 0.71rem;
+                    margin-left: 1rem !important;
+                    background-color: $clr-gray;
+                    border-radius: 50%;
+                    border: 1px solid black;
+                    color: $clr-lblue;
+                    transition: 0.5s ease;
+               
+                
+                }
+
+            }
+            
+        }
+        @keyframes slide-right {
+            from {
+              margin-left: -100%;
+            }
+          
+            to {
+              margin-left: 0%;
+            }
+          }
+        .slide-right a:hover{
+            padding: 0.5rem 2rem 0.5rem 3.5rem;
+            background-color: $clr-gray;
+            color: $clr-lblue;
+            transition: 0.5s ease-in;
+            i{
+               right: 9.8rem;
+                border: none;
+                transition: 0.5s ease;
+            }
+        }
+    
+        .image{
+            position: absolute;
+            right: -6rem;
+            top: -8rem;
+            z-index: -1;
+      
+            overflow: hidden;
+            img{
+                animation: slide-left 0.5s ease;
+            }
+        }
+        @keyframes slide-left {
+            from {
+              margin-left: 100%;
+              width: 200%; 
+              transition: 0.5s ease;
+            }
+          
+            to {
+              margin-left: 0%;
+              width: 100%;
+              transition: 0.5s ease;
+            }
+          }
+        }
+    }
+.mainSkills{
+  &__wrapper{
+
+    .tours{
+      &__wrapper{
+        margin: 0 auto !important;
+        @include grid(3,1rem);
+        @include mediaQuery(820px){
+            @include grid (2,1rem);
+        }
+        @include mediaQuery(){
+            @include grid (1,1rem);
+        }
+      }
+      &__card{
+        max-width: 300px;
+        width: 100%;
+        position: relative;
+        transition: 0.5s ease-in;
+        border-radius: 25px;
+        img{
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 25px;
+            @include mediaQuery(){
+                width: 100%;
+                height: 500px;
+            }
+        }
+        @include mediaQuery(){
+            &:nth-child(1), &:nth-child(2),&:nth-child(3),&:nth-child(4){
+                margin-bottom: 1rem;
+                top: 0;
+        }
+    }
+
+        .tours__details{
+            position: absolute;
+            bottom: 9rem;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+      }
+    }
+    .tours__card:hover{
+      transition: 0.5s ease-in;
+      img{
+          filter: grayscale(50%)
+      }
+      .tours__details h4{
+        display: none;
+      }
+      .overlay{
+          color: white;
+          position: absolute;
+          padding: 1rem;
+          visibility: visible;
+          top: 5rem;
+  
+          h3{
+              font-weight: bold;
+          }
+      }
+  }
+  .overlay{
+      visibility: hidden;
+  }
+  }
+}
