@@ -10,24 +10,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 </head>
 <body>
+    <div class="overlay"></div>
     <header class="header">
         <div class="container">
             <div class="header__wrapper d--flex justify--between align--center ">
                 <div>
                     <h2>Arvin C.</h2>
-                    <div class="overlay"></div>
                 </div>
 
-                <nav>
+                <nav class=".nav">
                     <ul class="d--flex">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
+                <div class="toggleMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
             </div>
+            </div>
+        </div>
+        <div class="headerMobileNav">
+            <ul class="text--center py--2">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
     </header>
     <section class="banner py--5">
@@ -41,7 +54,10 @@
                     </div>
                     <div class="slide-right">
                         <p class="mb--2">I'm probably the most enthusiastic developer/designer you'll ever work with. If you have an awesome project that requires some great skills, I'm your go-to person.</p>
-                        <a  href="#"> Download CV  <i class="fa-solid fa-download"></i>   </a>
+                        <div class="buttonCV">
+                            <a   href="#"> Download CV  <i class="fa-solid fa-download"></i>   </a>
+                        </div>    
+                       
                     </div>
                 </div>
    
@@ -51,7 +67,7 @@
             </div>
         </div>
     </section>
-    <section class="mainSkills py--10">
+    <section class="mainSkills">
         <div class="container">
             <div class="mainSkills__wrapper">
                 <div class="mainSkills__wrapper__details text--center">
@@ -66,7 +82,7 @@
                             <div class="tours__details text--center">
                                 <h4>Designer</h4>
                             </div>
-                            <div class="overlay">
+                            <div class="overlaySkills">
                                 <h4 class="mb--1">Designer</h4>
                                 <p>I value simple content structure, clean design patterns, and thoughtful interactions.</p>
                             </div>
@@ -76,7 +92,7 @@
                             <div class="tours__details text--center">
                                 <h4>Frontend Developer</h4>
                             </div>
-                            <div class="overlay">
+                            <div class="overlaySkills">
                                 <h4 class="mb--1">Frontend Developer</h4>
                                 <p>I like to code things from scratch, and enjoy bringing ideas to life in the browser.</p>
                             </div>
@@ -86,7 +102,7 @@
                             <div class="tours__details text--center">
                                 <h4>Aspiring Mentor</h4>
                             </div>
-                            <div class="overlay">
+                            <div class="overlaySkills">
                                 <h4 class="mb--1">Aspiring Mentor</h4>
                                 <p>I genuinely care about people, and love helping fellow designers work on their craft.</p>
                             </div>
@@ -97,70 +113,96 @@
 
         </div>
     </section>
-    <!-- <section class="mySkills">
-        <div class="container">
-            <h2>I have practical knowledge and skills in working with these programming languages and frameworks.</h2>
-            <div class="carousel">
-                <div class="carousel-item">
-                    <div class="skills">
-                        <div class="img-area" style="background-image: url(img/wordpress-icon-1.svg);"></div>
-                        <div class="skillName">
-                            <h4>WORDPRESS</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="skills">
-                        <div class="img-area" style="background-image: url(img/html-1.svg);"></div>
-                        <div class="skillName">
-                            <h4>HTML</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="skills">
-                        <div class="img-area" style="background-image: url(img/css-3.svg);"></div>
-                        <div class="skillName">
-                            <h4>CSS</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="skills">
-                        <div class="img-area" style="background-image: url(img/php-1.svg);"></div>
-                        <div class="skillName">
-                            <h4>PHP</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="skills">
-                        <div class="img-area" style="background-image: url(img/javascript-1.svg);"></div>
-                        <div class="skillName">
-                            <h4>JAVASCRIPT</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="skills">
-                        <div class="img-area" style="background-image: url(img/sass-1.svg);"></div>
-                        <div class="skillName">
-                            <h4>SASS</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="skills">
-                        <div class="img-area" style="background-image: url(img/tailwind-css-2.svg);"></div>
-                        <div class="skillName">
-                            <h4>TAILWIND</h4>
-                        </div>
-                    </div>
-                </div>
-        
-            </div>
-        </div>
-    </section> -->
+       <!-- Slider main container -->
+
+<section class="swiper">
+    <h1>I have practical knowledge and skills in working with these programming languages and frameworks.</h1>
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+     
+      <!-- Slides -->
+      <div class="swiper-slide">
+          <div class="slider-card">
+              <div class="skills">
+                  <div class="img-area" style="background-image: url(img/html-1.svg);"></div>
+                  <div class="skillName">
+                      <h4>HTML</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="slider-card">
+              <div class="skills">
+                  <div class="img-area" style="background-image: url(img/css-3.svg);"></div>
+                  <div class="skillName">
+                      <h4>CSS</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="slider-card">
+              <div class="skills">
+                  <div class="img-area" style="background-image: url(img/javascript-1.svg);"></div>
+                  <div class="skillName">
+                      <h4>JAVASCRIPT</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="slider-card">
+              <div class="skills">
+                  <div class="img-area" style="background-image: url(img/php-1.svg);"></div>
+                  <div class="skillName">
+                      <h4>PHP</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="slider-card">
+              <div class="skills">
+                  <div class="img-area" style="background-image: url(img/sass-1.svg);"></div>
+                  <div class="skillName">
+                      <h4>SASS</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="slider-card">
+              <div class="skills">
+                  <div class="img-area" style="background-image: url(img/tailwind-css-2.svg);"></div>
+                  <div class="skillName">
+                      <h4>TAILWIND</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="slider-card">
+              <div class="skills">
+                  <div class="img-area" style="background-image: url(img/wordpress-icon-1.svg);"></div>
+                  <div class="skillName">
+                      <h4>WORDPRESS</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+  
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+</section>
 	<section class="projects py--6 bg--primary">
 		<div class="container">
 			<div class="projects__wrapper">
@@ -313,21 +355,12 @@
             </div>
         </div>
     </footer>
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.carousel').carousel({
-              padding:200
-      });
-      autoplay();
-      function autoplay() {
-          $('.carousel').carousel('next');
-          setTimeout(autoplay, 4500);
-      }
-    });
-  </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js">
 </script>
 <script type="module">
@@ -352,5 +385,16 @@
 	  }
 	});
 	</script>
+    <script>
+        const nav = document.querySelector(".nav");
+        const toggleMenu = document.querySelector(".toggleMenu");
+        const headerMobileNav = document.querySelector('.headerMobileNav');
+    
+        toggleMenu.addEventListener("click", ()=>{
+            toggleMenu.classList.toggle("open");
+            headerMobileNav.classList.toggle('active');
+            nav.classList.toggle("open");
+        });
+    </script>
 </body>
 </html>

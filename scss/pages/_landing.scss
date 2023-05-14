@@ -1,26 +1,129 @@
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 710px;
+  height: 200px;
+  background-color: $clr-gray;
+  z-index: 2;
+  @include mediaQuery(){
+    display: none;
+   }
+}
+.gradientBottomDark{
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  background-image: linear-gradient( transparent, $clr-gray);
+  bottom: 0;
+}
+.gradientBottomFromTop{
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 10rem;
+  background-image: linear-gradient($clr-primary, transparent);
+  top: 0;
+}
+.overlayAbout{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 790px;
+  height: 200px;
+  background-color: #212626;
+  z-index: 2;
+  @include mediaQuery(){
+    display: none;
+   }
+}
+div.slides p{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 750px;
+  height: 114px;
+  background-color:$clr-gray;
+  z-index: 3;
+
+  @include mediaQuery(){
+    display: none;
+   }
+}
+
+.headerAbout{
+  z-index: 999;
+ @include mediaQuery(){
+  background-color: $clr-gray;
+  position: fixed;
+  width: 100%;
+ }
+  &__wrapper{
+   .aboutName{
+    h2{
+      z-index: 999;
+      position: relative;
+      font-family: $ff-secondary;
+      font-size: 33px;
+      padding: 2rem 1.5rem;
+      width: 163px;
+      letter-spacing: 2px;
+      background-color: $clr-lgreen ;
+  }
+   }
+      nav{
+        z-index: 999;
+          @include mediaQuery(){
+              display: none;
+             }
+      }
+      nav ul{
+          gap: 8rem;
+          font-size: 18px;
+          li a{
+              color: white;
+          }
+      }
+  }
+}
 .banner{
     &__wrapper{
         position: relative;
         .slide-up{
             position: absolute;
+            top: 8rem;
             left: 6rem;
             width: 100%;
             height: 350px;
             overflow: hidden;
+            @include mediaQuery(){
+              left: 1rem;
+              top: 3rem;
+             }
             .skill1{
                 animation: 0.5s slide-up;
                 margin-top: 0%;
                font-size: 60px;
+               @include mediaQuery(){
+                font-size: 28px;
+               }
             }
             .skill2{
                 animation: 0.9s slide-up;
                 margin-top: 0%;
                 font-size: 60px;
+                @include mediaQuery(){
+                  font-size: 28px;
+                 }
             }
             .skill3{
                 animation: 1.3s slide-up;
                 margin-top: 0%;
                 font-size: 60px;
+                @include mediaQuery(){
+                  font-size: 28px;
+                 }
             }
         }
         @keyframes slide-up{
@@ -35,41 +138,23 @@
               }
             }
         .slide-right {
-            margin-top: 20rem;
+            margin-top: 28rem;
             height: 200px;
             overflow: hidden;
             margin-left: 6rem;
+            @include mediaQuery(){
+              margin-top: 12rem;
+              margin-left: 1rem;
+              height: 400px;
+             }
             p{
                 width: 68%;
                 animation: 0.5s slide-right;
-            }
-            a{
-                position: relative;
-                animation: 0.5s slide-right;
-                background-color: $clr-lblue;
-                font-weight: bold;
-                color: black;
-                padding: 0.5rem 3.5rem 0.5rem 2rem;
-                border: 2px solid black;
-                border-radius: 5rem;
-                transition: 0.5s ease;
-           
-                i{
-                    position: absolute;
-                    top: -1px;
-                    right: -1px;
-                    padding: 0.71rem;
-                    margin-left: 1rem !important;
-                    background-color: $clr-gray;
-                    border-radius: 50%;
-                    border: 1px solid black;
-                    color: $clr-lblue;
-                    transition: 0.5s ease;
-               
-                
+                @include mediaQuery(){
+                  width: 60%;
                 }
-
             }
+
             
         }
         @keyframes slide-right {
@@ -81,28 +166,25 @@
               margin-left: 0%;
             }
           }
-        .slide-right a:hover{
-            padding: 0.5rem 2rem 0.5rem 3.5rem;
-            background-color: $clr-gray;
-            color: $clr-lblue;
-            transition: 0.5s ease-in;
-            i{
-               right: 9.8rem;
-                border: none;
-                transition: 0.5s ease;
-            }
-        }
+
     
         .image{
             position: absolute;
             right: -6rem;
-            top: -8rem;
+            top: -0.5rem;
             z-index: -1;
       
             overflow: hidden;
             img{
                 animation: slide-left 0.5s ease;
+                width: 827px;
+                height: 758px;
+                @include mediaQuery(){
+                  width: 420px;
+                  height: 358px;
+                }
             }
+            
         }
         @keyframes slide-left {
             from {
@@ -119,7 +201,48 @@
           }
         }
     }
+  .buttonCV a{
+    position: relative;
+    animation: 0.5s slide-right;
+    background-color: $clr-lblue;
+    font-weight: bold;
+    color: black;
+    padding: 0.5rem 3.5rem 0.5rem 2rem;
+    border: 2px solid black;
+    border-radius: 5rem;
+    transition: 0.5s ease;
+
+    i{
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        padding: 0.71rem;
+        margin-left: 1rem !important;
+        background-color: $clr-gray;
+        border-radius: 50%;
+        border: 1px solid black;
+        color: $clr-lblue;
+        transition: 0.5s ease;
+    
+    
+    }
+    &:hover{
+      padding: 0.5rem 2rem 0.5rem 3.5rem;
+      background-color: $clr-gray;
+      color: $clr-lblue;
+      transition: 0.5s ease-in;
+      i{
+         right: 9.8rem;
+          border: none;
+          transition: 0.5s ease;
+      }
+  }
+}
 .mainSkills{
+  padding: 10rem 0;
+  @include mediaQuery(){
+    padding: 0 0 5rem 0;
+  }
   &__wrapper{
     &__details{
       p{
@@ -208,15 +331,15 @@
       .tours__details h4{
         display: none;
       }
-      .overlay{
+      .overlaySkills{
         z-index: 10;
-          color: white;
-          position: absolute;
-          padding: 1rem;
-          text-align: center;
-          visibility: visible;
-          top: 8rem;
-          transition: 0.5s ease-in;
+        color: white;
+        position: absolute;
+        padding: 1rem;
+        text-align: center;
+        visibility: visible;
+        top: 8rem;
+        transition: 0.5s ease-in;
   
           h4{
               font-weight: bold;
@@ -228,41 +351,10 @@
           }
       }
   }
-  .overlay{
+  .overlaySkills{
       visibility: hidden;
   }
   }
-}
-.carousel{
-  height: 600px; 
-  perspective: 200px;
-}
-.carousel .carousel-item{
-width: 640px;
-height: 400px;
-}
-.skills {
-background-color: #fff;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-max-width: 300px;
-margin: auto;
-text-align: center;
-border-radius: 10px;
-height: 280px;
-}
-.img-area{
-border-radius: 10px 10px 0 0;
-height: 200px;
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center center;
-}
-.skillName h4 {
-color: #000;
-font-size: 35px;
-line-height: 1.5;
-margin: 15px 0;
-font-family: $ff-secondary;
 }
 .projects{
   &__wrapper{
@@ -283,10 +375,21 @@ font-family: $ff-secondary;
           font-weight: 700;
           font-size: 33px;
           line-height: 54px;
+          @include mediaQuery(){
+            line-height: 40px;
+          }
         }
         p{
           font-size: 16px;
           line-height: 24px;
+          @include mediaQuery(){
+            width: 90%;
+            margin: 1rem auto;
+          
+          }
+        }
+        @include mediaQuery(){
+          text-align: center;
         }
       }
       .button{
@@ -336,6 +439,7 @@ font-family: $ff-secondary;
       width: 450px;
       transition: 0.5s ease;
       h6{
+        color: white;
         font-size: 18px;
         font-weight: bold;
         transition: 0.5s ease;
@@ -357,7 +461,8 @@ font-family: $ff-secondary;
           font-size: 18px;
         }
         .arrow{
-          visibility: visible;
+          opacity: 1;
+          cursor: pointer;
         }
         @include mediaQuery(){
           width: 410px;
@@ -387,7 +492,8 @@ font-family: $ff-secondary;
         width: 46px;
         right: 0;
         bottom: 0;
-        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s ease;
       }
       &__details{
         position: relative;
@@ -467,7 +573,9 @@ font-family: $ff-secondary;
 .my-slider{
   color: black;
   margin: 15rem 0 3rem 0;
-
+  @include mediaQuery(){
+    margin-top: 9rem;
+  }
   .reviews{
     position: relative;
     background-color: white;
@@ -508,7 +616,7 @@ font-family: $ff-secondary;
       width: 90%;
       height: 300px;
       padding: 3rem;
-      
+      top: -10rem;
     }
     position: absolute;
     top: -7rem;
@@ -518,7 +626,6 @@ font-family: $ff-secondary;
     align-items: center;
     background-color: $clr-lblue;
     color: black;
-
     padding: 0 2rem;
     border-radius: 20px;
     .left{
@@ -612,6 +719,471 @@ font-family: $ff-secondary;
         text-align: center;
       }
 
+    }
+  }
+  .copyright2{
+    margin-top: 7rem;
+    @include mediaQuery(){
+      margin-top: 0;
+    }
+  }
+}
+.swiper {
+  width: 1000px;
+  height: 700px;
+}
+.swiper h1{
+  text-align: center;
+  width: 88%;
+  font-size: 33px;
+  line-height: 54px;
+  padding: 0 0 3rem 0;
+  margin: 0 auto;
+  @include mediaQuery(){
+    width: 90%;
+    line-height: 40px;
+  }
+}
+.swiper-wrapper{
+  width: 500px !important;
+}
+
+.swiper-slide{
+  margin: 0 5rem;
+}
+.slider-card {
+  z-index: 20;
+  background:black;
+  padding: 0px 0px;
+  margin: 50px 15px 90px 15px;
+  border-radius: 5px;
+  box-shadow: 0 15px 45px -20px rgb(0 0 0 / 73%);
+  transform: scale(0.9);
+
+  transition: all 0.3s;
+}
+.skills {
+  background-color: #000;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  height: 280px;
+  }
+  .img-area{
+  border-radius: 10px 10px 0 0;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+  .skillName h4 {
+  color: #fff;
+  font-size: 35px;
+  line-height: 1.5;
+  margin: 15px 0;
+  letter-spacing: 5px;
+  }
+.swiper-slide:nth-child(even){
+  opacity: 0.5;
+}
+.swiper-slide:nth-child(odd){
+  filter: drop-shadow(0px 15px 13px #00FFFF);
+}
+@media screen and (max-width:500px) {
+  .swiper{
+    width: 100%;
+  }
+  .swiper-slide{
+    margin: 0 2rem;
+    height: 200px;
+    width: 300px;
+  }
+}
+.aboutBanner{
+  padding-top: 6rem;
+  &__wrapper{
+    position: relative;
+    .name{
+      height: 400px;
+      overflow: hidden;
+      .arvin{
+        position: absolute;
+        top: 3.5rem;
+        font-size: 150px;
+        left: 7.5rem;
+        z-index: 5;
+        animation: 0.5s slide-right;
+        @include mediaQuery(){
+          font-size: 70px;
+          left: 0;
+          top: 7rem;
+        }
+      }
+      .castillo{
+        position: absolute;
+        top: 13rem;
+        font-size: 150px;
+        left: 7.5rem;
+        z-index: 10;
+        animation: 0.9s slide-right;
+        @include mediaQuery(){
+          font-size: 70px;
+          left: 0;
+          top: 12rem;
+        }
+      }
+    }
+    @keyframes slide-right {
+      from {
+        margin-left: -100%;
+      }
+    
+      to {
+        margin-left: 0%;
+      }
+    }
+    .aboutPic{
+      margin: 0 auto;
+      margin-bottom: -6px;
+      z-index: 7;
+      img{
+        height: 795px;
+        width: 641px;
+        @include mediaQuery(){
+          height: 464px;
+          width: 370px;
+          
+        }
+      }
+      @include mediaQuery(){
+        top: 5rem;
+        left: 45%;
+      }
+    }
+    &__content{
+      height: 400px;
+      overflow: hidden;
+      position: absolute;
+      left: 65%;
+      top: 18rem;
+      @include mediaQuery{
+        left: 0;
+        top: 20rem;
+      }
+      h6{
+        animation: 0.5s slide-left;
+        font-size: 18px;
+        @include mediaQuery(){
+          font-size: 16px;
+        }
+      }
+      h3{
+        animation: 0.9s slide-left;
+        font-size: 33px;
+        width: 500px;
+        @include mediaQuery(){
+          font-size: 25px;
+        }
+      }
+      p{
+        animation: 1.3s slide-left;
+        width: 90%;
+        @include mediaQuery(){
+          width: 70%;
+        }
+      }
+      .contactBanner{
+        animation: 1.7s slide-left;
+      }
+    
+    }
+    @keyframes slide-left {
+      from {
+        margin-left: 100%;
+
+      }
+    
+      to {
+        margin-left: 0%;
+
+      }
+    }
+  }
+}
+.aboutInfo{
+  &__wrapper{
+    @include mediaQuery(){
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .aboutLeft{
+      h3{
+        font-size: 33px;
+        @include mediaQuery(){
+          font-size: 25px;
+          text-align: center;
+        }
+      }
+      p{
+        opacity: 80%;
+        width: 85%;
+        @include mediaQuery(){
+          font-size: 16px;
+          text-align: center;
+          margin: 0 auto;
+          margin-bottom: 2rem;
+        }
+      }
+      table{
+        tr{
+          td{
+            padding-right: 2rem;
+            @include mediaQuery(){
+              padding-right: 3.5rem;
+            }
+          }
+        }
+      }
+      @include mediaQuery(){
+        order: 2;
+      }
+    }
+    .aboutRight{
+      
+      img{
+        height: 556px;
+        width: 556px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 22px 19px 24px 1px rgba(0, 0, 0, 0.4);
+        filter: grayscale(90%);
+        transition: 0.5s ease;
+        &:hover{
+          filter: unset;
+        }
+        @include mediaQuery(){
+          order: 1;
+          height: 292px;
+          width: 292px;
+        }
+      }
+    }
+  }
+}
+.figma{
+  position: relative;
+  padding: 6rem 0 25rem 0;
+  .figmaInfo{
+    padding: 3rem 0 12rem 0;
+    @include mediaQuery(){
+      text-align: center;
+      padding-bottom: 4rem;
+     }
+    h4{
+      font-size: 33px;
+    }
+    h1{
+      font-size: 70px;
+      letter-spacing: 15px
+    }
+    p{
+      width: 40%;
+      @include mediaQuery(){
+       width: 100%;
+      }
+    }
+  }
+  &__wrapper{
+
+    @include mediaQuery(){
+
+      flex-direction: column;
+    }
+    img{
+      height: 415px;
+      width: 657px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s ease-in-out;
+      @include mediaQuery(){
+        height: 225px;
+        width: 316px;
+        object-fit: cover;
+        margin: 0 auto;
+      }
+      &:hover{
+        height: 420px;
+        width: 662px;
+        margin-right: 0.5rem;
+        box-shadow: 17px 33px 80px #000000;
+        @include mediaQuery(){
+          height: 230px;
+          width: 321px;
+        }
+      }
+    }
+    .figmaLeft{
+      @include mediaQuery(){
+        margin: 0 auto !important;
+      }
+      .f3{
+        position: relative;
+        @include mediaQuery(){
+          position: none;
+        }
+      }
+    }
+    .figmaRight{
+    
+      margin-left: -10rem;
+      @include mediaQuery(){
+        margin-left: 0;
+        margin: 0 auto !important;
+      }
+      .f2{
+        margin: -20rem 0 13rem 0;
+        @include mediaQuery(){
+          margin: 2rem 0;
+        }
+      }
+      .f1{
+        position: absolute;
+        @include mediaQuery(){
+          position: none;
+        }
+      }
+    }
+  }
+}
+.accomplishments{
+  padding: 6rem 0 15rem 0;
+  &__wrapper{
+    gap: 2rem;
+
+    @include mediaQuery(){
+      flex-direction: column;
+    }
+    .projectsCompleted{
+      margin: 0 auto;
+      position: relative;
+      height: 210px;
+      width: 250px;
+      text-align: center;
+      background-color: $clr-lgreen;
+      box-shadow: 0px 16px 16px #000000;
+      border-radius: 25px;
+      transition: 0.5s ease;
+      .logo{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 2rem;
+        width: 65px;
+        height: 65px;
+        margin: 0 auto;
+        transition: 0.5s ease;
+      }
+      .hoverDisplay h2{
+        display: none;
+        position: absolute;
+        top: 7rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-shadow: 0px 1px 16px rgba(0, 255, 255, 0.8);
+        font-size: 33px;
+        transition: 0.5s ease;
+       
+      }
+      .accomplishmentsName h2{
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        transition: 0.5s ease;
+        padding: 0 3rem !important;
+      }
+      &:hover{
+        height: 290px;
+        .logo{
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 12rem;
+        }
+        .hoverDisplay h2{
+          transition: 0.5s ease;
+          display: block;
+        }
+        .accomplishmentsName h2{
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 12rem;
+        }
+
+      }
+    }
+  }
+}
+.contactPage{
+  padding-top: 10rem !important;
+  &__wrapper{
+    gap: 1.5rem !important;
+    @include mediaQuery(){
+      flex-direction: column;
+      padding-top: 3rem;
+    }
+    .contactInfo{
+      h2{
+        font-size: 70px;
+        @include mediaQuery(){
+          font-size: 33px;
+        }
+      }
+      p{
+        width: 80%;
+      }
+    }
+  }
+  .form{
+    @include mediaQuery(){
+      margin: 0 auto;
+    }
+    form{
+      label{
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      input{
+        background-color: #395E5E;
+        width: 463px;
+        height: 49px;
+        margin: 1rem 0;
+        border-radius: 5px;
+        border:  none;
+      }
+      textarea{
+        background-color: #395E5E;
+        border:  none;
+        width: 463px;
+        margin-top: 1rem ;
+        border-radius: 5px;
+      }
+      input[type=submit]{
+        height: 55px !important;
+        background-color: $clr-blue !important;
+        font-weight: 800;
+        font-family: $ff-primary;
+        font-size: 18px;
+        transition: 0.5s ease;
+        &:hover{
+          color: #fff;
+          background-color: #296D6D !important;
+        }
+      }
     }
   }
 }

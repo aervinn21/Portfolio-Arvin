@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio-About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlayAbout"></div>
+    <div class="slides">
+        <p class="overlayAbout2"></p>
+    </div>
+
+    <header class="headerAbout">
+        <div class="container">
+            <div class="headerAbout__wrapper d--flex justify--between align--center ">
+                <div class="aboutName">
+                    <h2>Arvin C.</h2>
+                </div>
+
+                <nav class=".nav">
+                    <ul class="d--flex">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="toggleMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
+            </div>
+        </div>
+        <div class="headerMobileNav">
+            <ul class="text--center py--2">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="contactPage py--6 bg--green">
+        <div class="container">
+            <div class="contactPage__wrapper d--flex justify--between">
+                <div class="contactInfo">
+                    <h2>Let’s talk business</h2> 
+                    <p>Now that you know a lot about me, let me know if you are interested to work with me.</p>
+            
+                </div>
+                <div class="form">
+                    <form action="">
+                        <label for="">Name</label> <br>
+                        <input type="text" name="name" id="name"><br>
+                        <label for="">Email</label><br>
+                        <input type="email" name="email" id="name" > <br>
+                        <label for="">Message</label> <br>
+                        <textarea name="message" id="message" cols="" rows="10" ></textarea> <br> <br>
+                        <input class="submit" type="submit" id="submit" value="LET'S GET STARTED">
+                    </form> 
+                </div>
+ 
+            </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer py--3">
+        <div class="container">
+            <div class="footer__wrapper d--flex justify--between mb--4">
+                <div class="leftFooter">
+                    <h1>Arvin.C</h1>
+                    <ul class="d--flex">
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+                    </ul>
+                </div>
+                <div class="copyright2">
+                    <p><small> © 2023 • Arvin Castillo</small></p>
+                </div>
+            </div>
+         
+        </div>
+    </footer>
+    <script>
+        const nav = document.querySelector(".nav");
+        const toggleMenu = document.querySelector(".toggleMenu");
+        const headerMobileNav = document.querySelector('.headerMobileNav');
+    
+        toggleMenu.addEventListener("click", ()=>{
+            toggleMenu.classList.toggle("open");
+            headerMobileNav.classList.toggle('active');
+            nav.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
