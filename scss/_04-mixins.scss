@@ -3,15 +3,6 @@
     justify-content: center;
     align-items: center;
 }
-@mixin homeFlex{
-    display: flex;
-    gap: 4rem;
-}
-@mixin locFlex{
-    display:flex;
-    gap: 6rem;
-}
-
 @mixin centerSpaceBetween{
     display: flex;
     justify-content: space-between;

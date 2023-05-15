@@ -12,8 +12,6 @@
             font-family: $ff-secondary;
             font-size: 33px;
             padding: 2rem 1.5rem;
-            width: 163px;
-            letter-spacing: 2px;
             background-color: $clr-lgreen ;
         }
         nav{
@@ -26,6 +24,7 @@
             font-size: 18px;
             li a{
                 color: white;
+                font-family: $ff-primary;
             }
         }
     }

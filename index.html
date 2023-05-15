@@ -17,8 +17,8 @@
     <header class="header">
         <div class="container">
             <div class="header__wrapper d--flex justify--between align--center ">
-                <div>
-                    <h2>Arvin C.</h2>
+                <div class="logoName">
+                    <h2>Arvin.C</h2>
                 </div>
 
                 <nav class=".nav">
@@ -37,9 +37,9 @@
         </div>
         <div class="headerMobileNav">
             <ul class="text--center py--2">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -55,7 +55,7 @@
                     <div class="slide-right">
                         <p class="mb--2">I'm probably the most enthusiastic developer/designer you'll ever work with. If you have an awesome project that requires some great skills, I'm your go-to person.</p>
                         <div class="buttonCV">
-                            <a   href="#"> Download CV  <i class="fa-solid fa-download"></i>   </a>
+                            <a   href="CV - Castillo, Arvin.pdf"> Download CV  <i class="fa-solid fa-download"></i>   </a>
                         </div>    
                        
                     </div>
@@ -114,12 +114,11 @@
         </div>
     </section>
        <!-- Slider main container -->
-
-<section class="swiper">
+<div class="container" >
+<section class="swiper" id="skills" >
     <h1>I have practical knowledge and skills in working with these programming languages and frameworks.</h1>
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
-     
       <!-- Slides -->
       <div class="swiper-slide">
           <div class="slider-card">
@@ -203,7 +202,8 @@
     <!-- If we need scrollbar -->
     <!-- <div class="swiper-scrollbar"></div> -->
 </section>
-	<section class="projects py--6 bg--primary">
+</div>
+	<section class="projects py--6 bg--primary" id="projects">
 		<div class="container">
 			<div class="projects__wrapper">
 				<div class="projectsLeft">
@@ -220,13 +220,13 @@
                             <div class="info">
                                 <h6 class="mb--1">Physionic</h6>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut accusamus animi, maxime odit pariatur facilis. Eveniet consequuntur necessitatibus sint voluptatum?</p>
-                                <img class="arrow" src="./img/arrow.png" alt="">
+                                <a href="https://github.com/aervinn21/Physionic-Castillo"><img class="arrow" src="./img/arrow.png" alt=""></a>
                             </div>
 						</div>
 						
 					</div>
 					<div class="button mt--4">
-						<a href="#">VIEW ALL PROJECTS</a>
+						<a href="about.html">VIEW ALL PROJECTS</a>
 					</div>
 				</div>
 				<div class="projectsRight">
@@ -238,7 +238,7 @@
                             <div class="info">
                                 <h6 class="mb--1">Creative Visual Design</h6>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut accusamus animi, maxime odit pariatur facilis. Eveniet consequuntur necessitatibus sint voluptatum?</p>
-                                <img class="arrow" src="./img/arrow.png" alt="">
+                                <a href="https://github.com/aervinn21/creativeVd"><img class="arrow" src="./img/arrow.png" alt=""></a> 
                             </div>
 						</div>
 						
@@ -251,20 +251,19 @@
                             <div class="info">
                                 <h6 class="mb--1">Craniocervical-Craniosacral-TMJ</h6>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut accusamus animi, maxime odit pariatur facilis. Eveniet consequuntur necessitatibus sint voluptatum?</p>
-                                <img class="arrow" src="./img/arrow.png" alt="">
+                                <a href="https://github.com/aervinn21/CTT-International-Castillo"><img class="arrow" src="./img/arrow.png" alt=""></a> 
                             </div>
 						</div>
 						
 					</div>
-					<div class="button mt--4">
+					<div class="buttonLg mt--4">
 						<a href="#">VIEW ALL PROJECTS</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-    <section class="slider text--center bg--green">
-
+    <section class="slider text--center bg--green" id="slider">
 		<div class="container">
 			<h2>Testimonials</h2>
 			<p>Here are a few lines from people who I have worked with over the past months.</p>
@@ -319,7 +318,7 @@
             <div class="contact__wrapper ">
                 <div class="left"><h2>Start a project!</h2></div>
                 <div class="mid"><p>Are you interested in collaborating? We should make a time to talk. I'll get you some coffee.</p></div>
-                <div class="right d--flex align--center "><img src="./img/handshake.png" alt=""><a href="#"> Let's do this</a></div>
+                <div class="right d--flex align--center "><img src="./img/handshake.png" alt=""><a href="contact.html"> Let's do this</a></div>
             </div>
         </div>
     </section>
@@ -339,14 +338,14 @@
                     <table>
                         <tr>
                             <td><a href="#">Home</a></td>
-                            <td><a href="#">Contact</a></td>
+                            <td><a href="contact.html">Contact</a></td>
                         </tr>
                         <tr>
-                            <td><a href="#">About</a></td>
-                            <td><a href="#">Reviews</a></td>
+                            <td><a href="about.html">About</a></td>
+                            <td><a href="#slider">Reviews</a></td>
                         </tr>
-                        <tr><td><a href="#">Projects</a></td></tr>
-                        <tr><td><a href="#">Skills</a></td></tr>
+                        <tr><td><a href="#projects">Projects</a></td></tr>
+                        <tr><td><a href="#skills">Skills</a></td></tr>
                     </table>
                 </div>
             </div>

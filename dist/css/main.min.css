@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: white;
@@ -40,8 +44,6 @@ a {
   font-family: "Anton", sans-serif;
   font-size: 33px;
   padding: 2rem 1.5rem;
-  width: 163px;
-  letter-spacing: 2px;
   background-color: #0E8388;
 }
 @media screen and (max-width: 48rem) {
@@ -55,6 +57,7 @@ a {
 }
 .header__wrapper nav ul li a {
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 .toggleMenu span {
@@ -154,9 +157,9 @@ a {
   width: 710px;
   height: 200px;
   background-color: #2C3333;
-  z-index: 2;
+  z-index: -1;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 1250px) {
   .overlay {
     display: none;
   }
@@ -189,7 +192,7 @@ a {
   background-color: #212626;
   z-index: 2;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 1250px) {
   .overlayAbout {
     display: none;
   }
@@ -223,11 +226,9 @@ div.slides p {
 .headerAbout__wrapper .aboutName h2 {
   z-index: 999;
   position: relative;
-  font-family: "Anton", sans-serif;
+  font-family: "Anton", sans-serif !important;
   font-size: 33px;
   padding: 2rem 1.5rem;
-  width: 163px;
-  letter-spacing: 2px;
   background-color: #0E8388;
 }
 .headerAbout__wrapper nav {
@@ -244,18 +245,33 @@ div.slides p {
 }
 .headerAbout__wrapper nav ul li a {
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 
+.banner {
+  font-family: "Poppins", sans-serif;
+}
 .banner__wrapper {
   position: relative;
 }
 .banner__wrapper .slide-up {
   position: absolute;
-  top: 8rem;
-  left: 6rem;
+  top: 0;
+  left: 3.5rem;
   width: 100%;
   height: 350px;
   overflow: hidden;
+}
+@media screen and (max-width: 1250px) {
+  .banner__wrapper .slide-up {
+    left: 5rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .banner__wrapper .slide-up {
+    top: -2rem;
+    left: 1rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .banner__wrapper .slide-up {
@@ -266,7 +282,17 @@ div.slides p {
 .banner__wrapper .slide-up .skill1 {
   animation: 0.5s slide-up;
   margin-top: 0%;
-  font-size: 60px;
+  font-size: 70px;
+}
+@media screen and (max-width: 1250px) {
+  .banner__wrapper .slide-up .skill1 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .banner__wrapper .slide-up .skill1 {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 48rem) {
   .banner__wrapper .slide-up .skill1 {
@@ -276,7 +302,17 @@ div.slides p {
 .banner__wrapper .slide-up .skill2 {
   animation: 0.9s slide-up;
   margin-top: 0%;
-  font-size: 60px;
+  font-size: 70px;
+}
+@media screen and (max-width: 1250px) {
+  .banner__wrapper .slide-up .skill2 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .banner__wrapper .slide-up .skill2 {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 48rem) {
   .banner__wrapper .slide-up .skill2 {
@@ -286,7 +322,17 @@ div.slides p {
 .banner__wrapper .slide-up .skill3 {
   animation: 1.3s slide-up;
   margin-top: 0%;
-  font-size: 60px;
+  font-size: 70px;
+}
+@media screen and (max-width: 1250px) {
+  .banner__wrapper .slide-up .skill3 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .banner__wrapper .slide-up .skill3 {
+    font-size: 40px;
+  }
 }
 @media screen and (max-width: 48rem) {
   .banner__wrapper .slide-up .skill3 {
@@ -304,10 +350,22 @@ div.slides p {
   }
 }
 .banner__wrapper .slide-right {
-  margin-top: 28rem;
+  margin-top: 23rem;
   height: 200px;
   overflow: hidden;
-  margin-left: 6rem;
+  margin-left: 3.5rem;
+}
+@media screen and (max-width: 1250px) {
+  .banner__wrapper .slide-right {
+    margin-top: 17rem;
+    margin-left: 5rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .banner__wrapper .slide-right {
+    margin-left: 1rem;
+    margin-top: 12rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .banner__wrapper .slide-right {
@@ -319,6 +377,11 @@ div.slides p {
 .banner__wrapper .slide-right p {
   width: 68%;
   animation: 0.5s slide-right;
+}
+@media screen and (max-width: 1250px) {
+  .banner__wrapper .slide-right p {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 48rem) {
   .banner__wrapper .slide-right p {
@@ -335,15 +398,38 @@ div.slides p {
 }
 .banner__wrapper .image {
   position: absolute;
-  right: -6rem;
-  top: -0.5rem;
+  right: -9rem;
+  top: -7rem;
   z-index: -1;
   overflow: hidden;
+}
+@media screen and (max-width: 1250px) {
+  .banner__wrapper .image {
+    top: -7rem;
+    right: -4rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .banner__wrapper .image {
+    right: -6rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .banner__wrapper .image {
+    top: -1rem;
+    right: -6rem;
+  }
 }
 .banner__wrapper .image img {
   animation: slide-left 0.5s ease;
   width: 827px;
   height: 758px;
+}
+@media screen and (max-width: 1250px) {
+  .banner__wrapper .image img {
+    width: 620px;
+    height: 558px;
+  }
 }
 @media screen and (max-width: 48rem) {
   .banner__wrapper .image img {
@@ -370,7 +456,7 @@ div.slides p {
   background-color: #CBE4DE;
   font-weight: bold;
   color: black;
-  padding: 0.5rem 3.5rem 0.5rem 2rem;
+  padding: 0.8rem 3.5rem 0.8rem 2rem;
   border: 2px solid black;
   border-radius: 5rem;
   transition: 0.5s ease;
@@ -379,7 +465,7 @@ div.slides p {
   position: absolute;
   top: -1px;
   right: -1px;
-  padding: 0.71rem;
+  padding: 1rem;
   margin-left: 1rem !important;
   background-color: #2C3333;
   border-radius: 50%;
@@ -388,18 +474,20 @@ div.slides p {
   transition: 0.5s ease;
 }
 .buttonCV a:hover {
-  padding: 0.5rem 2rem 0.5rem 3.5rem;
+  padding: 0.8rem 2rem 0.8rem 3.5rem;
   background-color: #2C3333;
   color: #CBE4DE;
   transition: 0.5s ease-in;
 }
 .buttonCV a:hover i {
-  right: 9.8rem;
+  right: 9.3rem;
+  top: 0.01rem;
   border: none;
   transition: 0.5s ease;
 }
 
 .mainSkills {
+  font-family: "Poppins", sans-serif;
   padding: 10rem 0;
 }
 @media screen and (max-width: 48rem) {
@@ -419,14 +507,7 @@ div.slides p {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
 }
-@media screen and (max-width: 820px) {
-  .mainSkills__wrapper .tours__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-  }
-}
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 870px) {
   .mainSkills__wrapper .tours__wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -528,12 +609,15 @@ div.slides p {
   visibility: hidden;
 }
 
+.projects {
+  font-family: "Poppins", sans-serif;
+}
 .projects__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 1250px) {
   .projects__wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -566,6 +650,11 @@ div.slides p {
     margin: 1rem auto;
   }
 }
+@media screen and (max-width: 1250px) {
+  .projects__wrapper .projectsLeft .projectsInfo {
+    text-align: center;
+  }
+}
 @media screen and (max-width: 48rem) {
   .projects__wrapper .projectsLeft .projectsInfo {
     text-align: center;
@@ -574,7 +663,7 @@ div.slides p {
 .projects__wrapper .projectsLeft .button {
   text-align: center;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 1250px) {
   .projects__wrapper .projectsLeft .button {
     display: none;
   }
@@ -591,23 +680,23 @@ div.slides p {
   color: #000;
   background-color: #00FFFF;
 }
-.projects__wrapper .projectsRight .button {
-  display: none;
+.projects__wrapper .projectsRight .buttonLg {
   text-align: center;
+  display: none;
 }
-@media screen and (max-width: 48rem) {
-  .projects__wrapper .projectsRight .button {
+@media screen and (max-width: 1250px) {
+  .projects__wrapper .projectsRight .buttonLg {
     display: block;
   }
 }
-.projects__wrapper .projectsRight .button a {
+.projects__wrapper .projectsRight .buttonLg a {
   color: white;
   padding: 1rem 3rem;
   border: 2px solid #00FFFF;
   font-weight: bold;
   transition: 0.5s ease;
 }
-.projects__wrapper .projectsRight .button a:hover {
+.projects__wrapper .projectsRight .buttonLg a:hover {
   padding: 1.5rem 3rem;
   color: #000;
   background-color: #00FFFF;
@@ -692,6 +781,7 @@ div.slides p {
 }
 
 .slider {
+  font-family: "Poppins", sans-serif;
   position: relative;
   padding: 6rem 0 18rem 0;
   width: 100%;
@@ -752,6 +842,7 @@ div.slides p {
 }
 
 .my-slider {
+  font-family: "Poppins", sans-serif;
   color: black;
   margin: 15rem 0 3rem 0;
 }
@@ -796,6 +887,7 @@ div.slides p {
 }
 
 .contact {
+  font-family: "Poppins", sans-serif;
   position: relative;
 }
 .contact__wrapper {
@@ -805,7 +897,7 @@ div.slides p {
   position: absolute;
   top: -7rem;
   height: 213px;
-  width: 1140px;
+  width: 1150px;
   text-align: center;
   align-items: center;
   background-color: #CBE4DE;
@@ -813,7 +905,19 @@ div.slides p {
   padding: 0 2rem;
   border-radius: 20px;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 1250px) {
+  .contact__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    width: 90%;
+    height: 200px;
+    padding: 3rem;
+    top: -10rem;
+    left: 5%;
+  }
+}
+@media screen and (max-width: 870px) {
   .contact__wrapper {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -822,6 +926,7 @@ div.slides p {
     height: 300px;
     padding: 3rem;
     top: -10rem;
+    left: 5%;
   }
 }
 .contact__wrapper .left h2 {
@@ -874,6 +979,9 @@ div.slides p {
 .footer__wrapper .leftFooter ul li a i:hover {
   color: #00FFFF;
 }
+.footer__wrapper .rightFooter table {
+  font-family: "Poppins", sans-serif;
+}
 .footer__wrapper .rightFooter table tr td {
   padding-right: 5rem;
   padding-top: 1rem;
@@ -891,12 +999,16 @@ div.slides p {
 .footer__wrapper .rightFooter table tr td a:hover {
   color: #00FFFF;
 }
+.footer .copyright p {
+  font-family: "Poppins", sans-serif;
+}
 @media screen and (max-width: 48rem) {
   .footer .copyright p {
     text-align: center;
   }
 }
 .footer .copyright2 {
+  font-family: "Poppins", sans-serif;
   margin-top: 7rem;
 }
 @media screen and (max-width: 48rem) {
@@ -906,17 +1018,33 @@ div.slides p {
 }
 
 .swiper {
+  font-family: "Poppins", sans-serif;
   width: 1000px;
   height: 700px;
+}
+@media screen and (max-width: 1250px) {
+  .swiper {
+    width: 800px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .swiper {
+    width: 700px;
+  }
 }
 
 .swiper h1 {
   text-align: center;
-  width: 88%;
   font-size: 33px;
   line-height: 54px;
   padding: 0 0 3rem 0;
-  margin: 0 auto;
+}
+@media screen and (max-width: 870px) {
+  .swiper h1 {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 48rem) {
   .swiper h1 {
@@ -927,6 +1055,11 @@ div.slides p {
 
 .swiper-wrapper {
   width: 500px !important;
+}
+@media screen and (max-width: 1250px) {
+  .swiper-wrapper {
+    width: 400px !important;
+  }
 }
 
 .swiper-slide {
@@ -989,6 +1122,7 @@ div.slides p {
   }
 }
 .aboutBanner {
+  font-family: "Poppins", sans-serif;
   padding-top: 6rem;
 }
 .aboutBanner__wrapper {
@@ -1005,12 +1139,61 @@ div.slides p {
   left: 7.5rem;
   z-index: 5;
   animation: 0.5s slide-right;
+  color: #2A4646;
+  -webkit-text-stroke: 0.5vw #2A4646;
+}
+@media screen and (max-width: 1250px) {
+  .aboutBanner__wrapper .name .arvin {
+    font-size: 120px;
+    left: 1rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .aboutBanner__wrapper .name .arvin {
+    font-size: 100px;
+    left: 2.2rem;
+    top: 2rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .aboutBanner__wrapper .name .arvin {
     font-size: 70px;
     left: 0;
-    top: 7rem;
+    top: 4rem;
+  }
+}
+.aboutBanner__wrapper .name .arvin::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #00FFFF;
+  -webkit-text-stroke: 0vw #2C3333;
+  border-right: 2px solid #00FFFF;
+  overflow: hidden;
+  animation: animate 3s linear infinite;
+}
+.aboutBanner__wrapper .name .castillo::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #00FFFF;
+  -webkit-text-stroke: 0vw #2C3333;
+  border-right: 2px solid #00FFFF;
+  overflow: hidden;
+  animation: animate 3s linear infinite;
+}
+@keyframes animate {
+  0%, 10%, 100% {
+    width: 0;
+  }
+  70%, 90% {
+    width: 100%;
   }
 }
 .aboutBanner__wrapper .name .castillo {
@@ -1020,12 +1203,28 @@ div.slides p {
   left: 7.5rem;
   z-index: 10;
   animation: 0.9s slide-right;
+  color: #2A4646;
+  -webkit-text-stroke: 0.5vw #2A4646;
+}
+@media screen and (max-width: 1250px) {
+  .aboutBanner__wrapper .name .castillo {
+    font-size: 120px;
+    left: 1rem;
+    top: 12rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .aboutBanner__wrapper .name .castillo {
+    font-size: 100px;
+    left: 2.2rem;
+    top: 9rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .aboutBanner__wrapper .name .castillo {
     font-size: 70px;
     left: 0;
-    top: 12rem;
+    top: 8rem;
   }
 }
 @keyframes slide-right {
@@ -1045,8 +1244,16 @@ div.slides p {
   height: 795px;
   width: 641px;
 }
+@media screen and (max-width: 870px) {
+  .aboutBanner__wrapper .aboutPic img {
+    height: 564px;
+    width: 470px;
+  }
+}
 @media screen and (max-width: 48rem) {
   .aboutBanner__wrapper .aboutPic img {
+    margin-left: 45%;
+    padding-top: 5rem;
     height: 464px;
     width: 370px;
   }
@@ -1058,16 +1265,34 @@ div.slides p {
   }
 }
 .aboutBanner__wrapper__content {
-  height: 400px;
+  height: 600px;
   overflow: hidden;
   position: absolute;
   left: 65%;
   top: 18rem;
 }
+@media screen and (max-width: 1250px) {
+  .aboutBanner__wrapper__content {
+    top: 15rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .aboutBanner__wrapper__content {
+    top: 9rem;
+  }
+  .aboutBanner__wrapper__content .aboutQuote {
+    display: none;
+  }
+}
 @media screen and (max-width: 48rem) {
   .aboutBanner__wrapper__content {
     left: 0;
-    top: 20rem;
+    top: 15rem;
+  }
+}
+@media screen and (max-width: 48rem) and (max-width: 48rem) {
+  .aboutBanner__wrapper__content .aboutQuote {
+    display: none;
   }
 }
 .aboutBanner__wrapper__content h6 {
@@ -1084,9 +1309,21 @@ div.slides p {
   font-size: 33px;
   width: 500px;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 1250px) {
+  .aboutBanner__wrapper__content h3 {
+    width: 270px;
+  }
+}
+@media screen and (max-width: 870px) {
   .aboutBanner__wrapper__content h3 {
     font-size: 25px;
+    width: 250px;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .aboutBanner__wrapper__content h3 {
+    font-size: 20px;
+    width: 500px;
   }
 }
 .aboutBanner__wrapper__content p {
@@ -1110,8 +1347,12 @@ div.slides p {
   }
 }
 
-@media screen and (max-width: 48rem) {
+.aboutInfo {
+  font-family: "Poppins", sans-serif;
+}
+@media screen and (max-width: 870px) {
   .aboutInfo__wrapper {
+    text-align: center;
     flex-direction: column;
     gap: 1rem;
   }
@@ -1129,6 +1370,12 @@ div.slides p {
   opacity: 80%;
   width: 85%;
 }
+@media screen and (max-width: 870px) {
+  .aboutInfo__wrapper .aboutLeft p {
+    margin: 0 auto;
+    margin-bottom: 2rem !important;
+  }
+}
 @media screen and (max-width: 48rem) {
   .aboutInfo__wrapper .aboutLeft p {
     font-size: 16px;
@@ -1137,15 +1384,21 @@ div.slides p {
     margin-bottom: 2rem;
   }
 }
-.aboutInfo__wrapper .aboutLeft table tr td {
-  padding-right: 2rem;
-}
-@media screen and (max-width: 48rem) {
-  .aboutInfo__wrapper .aboutLeft table tr td {
-    padding-right: 3.5rem;
+@media screen and (max-width: 870px) {
+  .aboutInfo__wrapper .aboutLeft table.center {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
+.aboutInfo__wrapper .aboutLeft table.center tr td {
+  padding-right: 2rem !important;
+}
 @media screen and (max-width: 48rem) {
+  .aboutInfo__wrapper .aboutLeft table.center tr td {
+    padding-left: 2rem;
+  }
+}
+@media screen and (max-width: 870px) {
   .aboutInfo__wrapper .aboutLeft {
     order: 2;
   }
@@ -1163,7 +1416,13 @@ div.slides p {
 .aboutInfo__wrapper .aboutRight img:hover {
   filter: unset;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 1250px) {
+  .aboutInfo__wrapper .aboutRight img {
+    height: 392px;
+    width: 392px;
+  }
+}
+@media screen and (max-width: 870px) {
   .aboutInfo__wrapper .aboutRight img {
     order: 1;
     height: 292px;
@@ -1172,11 +1431,22 @@ div.slides p {
 }
 
 .figma {
+  font-family: "Poppins", sans-serif;
   position: relative;
   padding: 6rem 0 25rem 0;
 }
 .figma .figmaInfo {
   padding: 3rem 0 12rem 0;
+}
+@media screen and (max-width: 1250px) {
+  .figma .figmaInfo {
+    padding-bottom: 7rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .figma .figmaInfo {
+    padding-bottom: 10rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .figma .figmaInfo {
@@ -1194,9 +1464,24 @@ div.slides p {
 .figma .figmaInfo p {
   width: 40%;
 }
+@media screen and (max-width: 1250px) {
+  .figma .figmaInfo p {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 870px) {
+  .figma .figmaInfo p {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 48rem) {
   .figma .figmaInfo p {
     width: 100%;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .figma__wrapper {
+    margin-left: 7%;
   }
 }
 @media screen and (max-width: 48rem) {
@@ -1210,6 +1495,24 @@ div.slides p {
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
+}
+@media screen and (max-width: 1250px) {
+  .figma__wrapper img {
+    height: 315px;
+    width: 557px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 870px) {
+  .figma__wrapper img {
+    height: 225px;
+    width: 316px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 auto;
+  }
 }
 @media screen and (max-width: 48rem) {
   .figma__wrapper img {
@@ -1225,6 +1528,18 @@ div.slides p {
   width: 662px;
   margin-right: 0.5rem;
   box-shadow: 17px 33px 80px #000000;
+}
+@media screen and (max-width: 1250px) {
+  .figma__wrapper img:hover {
+    height: 320px;
+    width: 562px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .figma__wrapper img:hover {
+    height: 230px;
+    width: 321px;
+  }
 }
 @media screen and (max-width: 48rem) {
   .figma__wrapper img:hover {
@@ -1248,6 +1563,12 @@ div.slides p {
 .figma__wrapper .figmaRight {
   margin-left: -10rem;
 }
+@media screen and (max-width: 870px) {
+  .figma__wrapper .figmaRight {
+    margin-left: -2rem;
+    margin-top: -4rem;
+  }
+}
 @media screen and (max-width: 48rem) {
   .figma__wrapper .figmaRight {
     margin-left: 0;
@@ -1256,6 +1577,18 @@ div.slides p {
 }
 .figma__wrapper .figmaRight .f2 {
   margin: -20rem 0 13rem 0;
+}
+@media screen and (max-width: 1250px) {
+  .figma__wrapper .figmaRight .f2 {
+    margin-top: -15rem;
+    margin-bottom: 9rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .figma__wrapper .figmaRight .f2 {
+    margin-top: -5rem;
+    margin-bottom: 5rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .figma__wrapper .figmaRight .f2 {
@@ -1272,14 +1605,27 @@ div.slides p {
 }
 
 .accomplishments {
+  font-family: "Poppins", sans-serif;
   padding: 6rem 0 15rem 0;
 }
 .accomplishments__wrapper {
   gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+@media screen and (max-width: 1250px) {
+  .accomplishments__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4rem;
+  }
 }
 @media screen and (max-width: 48rem) {
   .accomplishments__wrapper {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
   }
 }
 .accomplishments__wrapper .projectsCompleted {
@@ -1343,6 +1689,7 @@ div.slides p {
 }
 
 .contactPage {
+  font-family: "Poppins", sans-serif;
   padding-top: 10rem !important;
 }
 .contactPage__wrapper {
@@ -1382,12 +1729,22 @@ div.slides p {
   border-radius: 5px;
   border: none;
 }
+@media screen and (max-width: 48rem) {
+  .contactPage .form form input {
+    width: 420px;
+  }
+}
 .contactPage .form form textarea {
   background-color: #395E5E;
   border: none;
   width: 463px;
   margin-top: 1rem;
   border-radius: 5px;
+}
+@media screen and (max-width: 48rem) {
+  .contactPage .form form textarea {
+    width: 420px;
+  }
 }
 .contactPage .form form input[type=submit] {
   height: 55px !important;
