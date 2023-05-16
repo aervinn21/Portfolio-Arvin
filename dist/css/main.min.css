@@ -59,6 +59,9 @@ a {
   color: white;
   font-family: "Poppins", sans-serif;
 }
+.header__wrapper nav ul li a:hover {
+  color: #00FFFF;
+}
 
 .toggleMenu span {
   background-color: #00FFFF;
@@ -150,6 +153,11 @@ a {
     transform: translate(-2px, -14px) rotate(-45deg);
   }
 }
+.border-bottom {
+  border-bottom: 1px solid #00FFFF;
+  transition: 0.5s ease;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -246,6 +254,9 @@ div.slides p {
 .headerAbout__wrapper nav ul li a {
   color: white;
   font-family: "Poppins", sans-serif;
+}
+.headerAbout__wrapper nav ul li a:hover {
+  color: #00FFFF;
 }
 
 .banner {

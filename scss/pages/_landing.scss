@@ -1,3 +1,7 @@
+.border-bottom{
+  border-bottom: 1px solid $clr-blue;
+  transition: 0.5s ease;
+}
 .overlay{
   position: absolute;
   top: 0;
@@ -82,6 +86,9 @@ div.slides p{
           li a{
               color: white;
               font-family: $ff-primary;
+              &:hover{
+                color: $clr-blue;
+            }
           }
       }
   }

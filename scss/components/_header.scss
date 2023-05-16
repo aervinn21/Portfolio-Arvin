@@ -25,6 +25,9 @@
             li a{
                 color: white;
                 font-family: $ff-primary;
+                &:hover{
+                    color: $clr-blue;
+                }
             }
         }
     }
