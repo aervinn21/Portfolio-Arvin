@@ -59,8 +59,18 @@ a {
   color: white;
   font-family: "Poppins", sans-serif;
 }
-.header__wrapper nav ul li a:hover {
-  color: #00FFFF;
+.header__wrapper nav ul li:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.header__wrapper nav ul li:hover:after {
+  width: 100%;
+  background: #00FFFF;
 }
 
 .toggleMenu span {
@@ -255,8 +265,18 @@ div.slides p {
   color: white;
   font-family: "Poppins", sans-serif;
 }
-.headerAbout__wrapper nav ul li a:hover {
-  color: #00FFFF;
+.headerAbout__wrapper nav ul li:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+.headerAbout__wrapper nav ul li:hover:after {
+  width: 100%;
+  background: #00FFFF;
 }
 
 .banner {
@@ -1703,19 +1723,34 @@ div.slides p {
   font-family: "Poppins", sans-serif;
   padding-top: 10rem !important;
 }
+@media screen and (max-width: 870px) {
+  .contactPage {
+    padding-top: 2rem !important;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .contactPage {
+    padding-top: 8rem !important;
+  }
+}
 .contactPage__wrapper {
   gap: 1.5rem !important;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 870px) {
   .contactPage__wrapper {
     flex-direction: column;
     padding-top: 3rem;
   }
 }
+@media screen and (max-width: 870px) {
+  .contactPage__wrapper .contactInfo {
+    text-align: center;
+  }
+}
 .contactPage__wrapper .contactInfo h2 {
   font-size: 70px;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 870px) {
   .contactPage__wrapper .contactInfo h2 {
     font-size: 33px;
   }
@@ -1723,7 +1758,15 @@ div.slides p {
 .contactPage__wrapper .contactInfo p {
   width: 80%;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 870px) {
+  .contactPage__wrapper .contactInfo p {
+    margin: 0 auto;
+  }
+}
+.contactPage .form {
+  margin-top: 2rem;
+}
+@media screen and (max-width: 870px) {
   .contactPage .form {
     margin: 0 auto;
   }
@@ -1740,7 +1783,7 @@ div.slides p {
   border-radius: 5px;
   border: none;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 870px) {
   .contactPage .form form input {
     width: 420px;
   }
@@ -1752,7 +1795,7 @@ div.slides p {
   margin-top: 1rem;
   border-radius: 5px;
 }
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 870px) {
   .contactPage .form form textarea {
     width: 420px;
   }

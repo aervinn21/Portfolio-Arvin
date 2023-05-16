@@ -86,9 +86,19 @@ div.slides p{
           li a{
               color: white;
               font-family: $ff-primary;
-              &:hover{
-                color: $clr-blue;
-            }
+          }
+          li:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 1px;
+            width: 0px;
+            background: transparent;
+            transition: width .5s ease, background-color .5s ease;
+          }
+          li:hover:after {
+            width: 100%;
+            background: $clr-blue;
           }
       }
   }
@@ -1382,26 +1392,39 @@ div.slides p{
 .contactPage{
   font-family: $ff-primary;
   padding-top: 10rem !important;
+  @include mediaQuery($break-md){
+    padding-top: 2rem !important;
+  }
+  @include mediaQuery(){
+    padding-top: 8rem !important;
+  }
   &__wrapper{
     gap: 1.5rem !important;
-    @include mediaQuery(){
+    @include mediaQuery($break-md){
       flex-direction: column;
       padding-top: 3rem;
     }
     .contactInfo{
+      @include mediaQuery($break-md){
+        text-align: center;
+      }
       h2{
         font-size: 70px;
-        @include mediaQuery(){
+        @include mediaQuery($break-md){
           font-size: 33px;
         }
       }
       p{
         width: 80%;
+        @include mediaQuery($break-md){
+          margin: 0 auto;
+        }
       }
     }
   }
   .form{
-    @include mediaQuery(){
+    margin-top: 2rem;
+    @include mediaQuery($break-md){
       margin: 0 auto;
     }
     form{
@@ -1416,7 +1439,7 @@ div.slides p{
         margin: 1rem 0;
         border-radius: 5px;
         border:  none;
-        @include mediaQuery(){
+        @include mediaQuery($break-md){
           width: 420px;
         }
       }
@@ -1426,7 +1449,7 @@ div.slides p{
         width: 463px;
         margin-top: 1rem ;
         border-radius: 5px;
-        @include mediaQuery(){
+        @include mediaQuery($break-md){
           width: 420px;
         }
       }

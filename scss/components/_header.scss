@@ -25,10 +25,20 @@
             li a{
                 color: white;
                 font-family: $ff-primary;
-                &:hover{
-                    color: $clr-blue;
-                }
             }
+            li:after {
+                content: '';
+                display: block;
+                margin: auto;
+                height: 1px;
+                width: 0px;
+                background: transparent;
+                transition: width .5s ease, background-color .5s ease;
+              }
+              li:hover:after {
+                width: 100%;
+                background: $clr-blue;
+              }
         }
     }
 }
