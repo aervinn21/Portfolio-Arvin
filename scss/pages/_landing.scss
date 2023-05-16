@@ -757,18 +757,24 @@ div.slides p{
       gap: 2rem;
     }
     .leftFooter{
+      @include mediaQuery(){
+        text-align: center;
+      }
       h1{
         font-size: 70px;
         font-family: $ff-secondary;
         letter-spacing: 5px;
       }
       ul{
+        @include mediaQuery(){
+          justify-content: center;
+          margin-right: -1.5rem;
+        }
         li a i{
           color: white;
           font-size: 32px;
           margin-right: 2rem;
           transition: 0.5s ease;
-          
           &:hover{
             color: #00FFFF;
           }
@@ -813,6 +819,7 @@ div.slides p{
     font-family: $ff-primary;
     margin-top: 7rem;
     @include mediaQuery(){
+      text-align: center;
       margin-top: 0;
     }
   }

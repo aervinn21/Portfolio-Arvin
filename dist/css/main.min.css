@@ -10,6 +10,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
   color: white;
   background-color: #1B2626;
 }
@@ -996,10 +997,21 @@ div.slides p {
     gap: 2rem;
   }
 }
+@media screen and (max-width: 48rem) {
+  .footer__wrapper .leftFooter {
+    text-align: center;
+  }
+}
 .footer__wrapper .leftFooter h1 {
   font-size: 70px;
   font-family: "Anton", sans-serif;
   letter-spacing: 5px;
+}
+@media screen and (max-width: 48rem) {
+  .footer__wrapper .leftFooter ul {
+    justify-content: center;
+    margin-right: -1.5rem;
+  }
 }
 .footer__wrapper .leftFooter ul li a i {
   color: white;
@@ -1044,6 +1056,7 @@ div.slides p {
 }
 @media screen and (max-width: 48rem) {
   .footer .copyright2 {
+    text-align: center;
     margin-top: 0;
   }
 }

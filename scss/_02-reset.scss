@@ -8,7 +8,7 @@ html{
 }
 body{
     font-family: $ff-primary;
-
+    overflow-x: hidden;
     color: white;
     background-color: $clr-primary;
 }
